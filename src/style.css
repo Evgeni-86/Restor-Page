@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    font-weight: normal;
+    margin: 0;
+}
+
+body {
+    background-color: #e3e3e3;
+}
+
+:root {
+    --hot-grid-cols: 0;
+    --hot-grid-rows: 0;
+    --menu-grid-cols: 0;
+    --menu-grid-rows: 0;
+}
+
+@media screen and (min-device-width: 980px) /* Desktop */ {
+    :root {
+        --basic-width: 980px;
+    }
+}
+@media screen and (max-device-width: 980px) /* Desktop */ {
+    :root {
+        --basic-width: 500px;
+    }
+}
+
+#content {
+    min-height: 100vh;
+    width: var(--basic-width);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 20rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    background-image: url(./img/page_image_menu.jpeg);
+    background-size: cover;
+    background-position-y: bottom;
+}
+/******************HEADRE******************************************/
+.header_div {
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/page_image_main.jpeg);
+    background-size: cover;
+    background-position-x: center;
+}
+.header_div_text {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: orangered;
+}
+.header_div_info {
+    width: 100%;
+    height: 20%;
+    background-color: #ffffff;
+    background-image: url(./img/header_info.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+/*************************************************************/
+/***********MENU SECTION*****************************************/
+.menu_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(./img/page_image_menu.jpeg);
+    background-size: cover;
+    background-position-x: center;
+}
+.menu_section_chois {
+    width: 100%;
+    min-height: 2rem;
+    background-color: crimson;    
+}
+.menu_section_menu {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    min-height: 12rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.menu_section_elements {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(var(--menu-grid-cols), 1fr);
+    grid-template-rows: repeat(var(--menu-grid-rows), auto);
+    gap: 1rem;
+}
+.menu_section_elements figure {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem;
+    filter: brightness(0.8);
+}
+.menu_section_elements figure:hover {
+    filter: brightness(1);
+    padding: 0rem;
+}
+.menu_section_elements img {
+    width: 100%;
+    height: auto;
+}
+.menu_section_elements figcaption {
+    width: 100%;
+    color: #ffffff;
+}
+/****************************************************************************/
+/************HOT SECTION***********************************************************/
+.menu_list_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    background-image: url('./img/hot_section_image.jpg');
+    background-size: cover;
+    /* background-position-x: center; */
+}
+
+.section_news {
+    width: 100%;
+    height: 5rem;
+    background-color: #ffffff;
+}
+.section_pos {
+    width: 100%;
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+}
+
+.section_elements {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(var(--hot-grid-cols), 1fr);
+    grid-template-rows: repeat(var(--hot-grid-rows), auto);
+    gap: 2rem;
+}
+.section_elements figure {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 0.2rem;
+    filter: brightness(1);
+}
+.section_elements figure:hover {
+    padding: 0rem;
+    filter: brightness(1);
+}
+.positions img {
+    height: auto;
+    width: 100%;
+    border-radius: 50%;
+    border: 0.5rem solid #f2f2f2;
+    box-shadow: 7px 7px 8px 0px rgba(34, 60, 80, 0.5);
+}
+
+.positions figcaption {
+    background-color: #ffffff;
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 12rem;
+    box-shadow: 2px 2px 6px 0px rgba(34, 60, 80, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0;
+}
+
+.section_elements button {
+    width: 80%;
+    height: 1.5rem;
+    background-color: #ff9900;
+}
+.section_elements button:hover {
+    background-color: #ffb444;
+}
